@@ -57,8 +57,8 @@
     transform: translate(-50%, -50%); /* Centrado perfecto */
     font-size: 18px; /* Texto más pequeño */
     font-weight: bold;
-    color: #fff;
-    background: #3d0000;
+    color: #ffcc00; /* Texto amarillo claro para mejor visibilidad */
+    background: linear-gradient(135deg, #3d0000, #660000); /* Fondo con degradado */
     border: 2px solid transparent;
     border-radius: 25px; /* Bordes más redondeados */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Menos sombra */
@@ -76,7 +76,7 @@
     left: -100%;
     width: 300%;
     height: 100%;
-    background: #3d0000; /* Haz de luz más tenue */
+    background: rgba(255, 204, 0, 0.2); /* Haz de luz tenue y visible */
     transform: skewX(-45deg);
     transition: 0.5s;
 }
@@ -86,8 +86,8 @@
 }
 
 .button:hover {
-    color: #000;
-    background: #3d0000;
+    color: #fff; /* Cambia a blanco en hover */
+    background: linear-gradient(135deg, #660000, #3d0000); /* Inversión del degradado */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
     transform: translate(-50%, -50%) scale(1.05); /* Efecto hover discreto */
 }
