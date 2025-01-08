@@ -50,27 +50,46 @@
 .button {
     position: absolute;
     text-align: center;
-    width: 220px;
+    width: 240px;
     padding: 15px 30px;
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 22px;
     font-weight: bold;
-    color: white;
-    background: linear-gradient(45deg, #ff0077, #ffcc00);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    background: linear-gradient(135deg, #00d4ff, #8500ff);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    animation: zoomPulse 2s infinite;
+}
+
+.button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-45deg);
+    transition: 0.5s;
+}
+
+.button:hover:before {
+    left: 100%;
 }
 
 .button:hover {
-    background: linear-gradient(45deg, #ffcc00, #ff0077);
-    color: white;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    color: #000;
+    background: linear-gradient(135deg, #8500ff, #00d4ff);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
     transform: translate(-50%, -50%) scale(1.1);
 }
 
@@ -78,22 +97,35 @@
     transform: translate(-50%, -50%) scale(0.95);
 }
 
-/* Animación de pulsación */
-@keyframes pulse {
+/* Animación de borde */
+@keyframes borderGlow {
     0% {
-        box-shadow: 0 0 15px rgba(255, 0, 119, 0.5), 0 0 30px rgba(255, 204, 0, 0.5);
+        border-color: #00d4ff;
+        box-shadow: 0 0 10px #00d4ff, 0 0 20px #8500ff;
     }
     50% {
-        box-shadow: 0 0 30px rgba(255, 0, 119, 0.8), 0 0 50px rgba(255, 204, 0, 0.8);
+        border-color: #8500ff;
+        box-shadow: 0 0 20px #8500ff, 0 0 30px #00d4ff;
     }
     100% {
-        box-shadow: 0 0 15px rgba(255, 0, 119, 0.5), 0 0 30px rgba(255, 204, 0, 0.5);
+        border-color: #00d4ff;
+        box-shadow: 0 0 10px #00d4ff, 0 0 20px #8500ff;
     }
 }
 
-.button:hover {
-    animation: pulse 1.5s infinite;
+/* Animación de zoom intermitente */
+@keyframes zoomPulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
 }
+
 
     /* Ajustes para pantallas grandes (escritorio) */
     @media (min-width: 1024px) {
