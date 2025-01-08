@@ -52,9 +52,9 @@
     text-align: center;
     width: 240px;
     padding: 15px 30px;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 65%; /* Mantiene el botón en la posición vertical deseada */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Centrado perfecto */
     font-size: 22px;
     font-weight: bold;
     color: #fff;
@@ -66,8 +66,8 @@
     cursor: pointer;
     transition: all 0.4s ease-in-out;
     overflow: hidden;
-    position: relative;
-    animation: zoomPulse 2s infinite;
+    position: absolute;
+    animation: zoomPulse 2s infinite; /* Zoom intermitente */
 }
 
 .button:before {
@@ -116,13 +116,13 @@
 /* Animación de zoom intermitente */
 @keyframes zoomPulse {
     0% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1); /* Centrado + tamaño normal */
     }
     50% {
-        transform: translate(-50%, -50%) scale(1.1);
+        transform: translate(-50%, -50%) scale(1.1); /* Centrado + tamaño más grande */
     }
     100% {
-        transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1); /* Vuelve al tamaño normal */
     }
 }
 
