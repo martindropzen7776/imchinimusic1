@@ -50,17 +50,17 @@
 .button {
     position: absolute;
     text-align: center;
-    width: 120px; /* Más estrecho */
-    padding: 15px 10px; /* Más alto y con menos ancho interno */
+    width: 300px; /* Más largo horizontalmente */
+    padding: 10px 20px; /* Ajuste del padding para mantener proporciones */
     top: 65%; /* Ajuste vertical */
     left: 50%; /* Centrado horizontalmente */
     transform: translate(-50%, -50%); /* Centrado perfecto */
-    font-size: 16px; /* Texto más pequeño para adaptarse */
+    font-size: 18px; /* Tamaño del texto */
     font-weight: bold;
     color: #ffcc00; /* Texto amarillo claro para mejor visibilidad */
     background: linear-gradient(135deg, #3d0000, #660000); /* Fondo con degradado */
     border: 2px solid transparent;
-    border-radius: 35px; /* Bordes más redondeados */
+    border-radius: 25px; /* Bordes redondeados */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Menos sombra */
     text-decoration: none;
     cursor: pointer;
@@ -108,6 +108,7 @@
         transform: translate(-50%, -50%) scale(1);
     }
 }
+
     /* Ajustes para pantallas grandes (escritorio) */
     @media (min-width: 1024px) {
         .landing {
