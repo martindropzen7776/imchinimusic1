@@ -47,28 +47,53 @@
         align-items: center;
     }
 
-    .button {
-        position: absolute;
-        text-align: center;
-        width: 200px;
-        padding: 15px 30px;
-        top: 65%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
-        background: linear-gradient(45deg, #ff0077, #ffcc00);
-        border: none;
-        border-radius: 12px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        text-decoration: none;
-    }
+.button {
+    position: absolute;
+    text-align: center;
+    width: 220px;
+    padding: 15px 30px;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff0077, #ffcc00);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
 
-    .button:hover {
-        background: linear-gradient(45deg, #ffcc00, #ff0077);
-        color: white;
+.button:hover {
+    background: linear-gradient(45deg, #ffcc00, #ff0077);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.button:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+/* Animación de pulsación */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 0, 119, 0.5), 0 0 30px rgba(255, 204, 0, 0.5);
     }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 0, 119, 0.8), 0 0 50px rgba(255, 204, 0, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 0, 119, 0.5), 0 0 30px rgba(255, 204, 0, 0.5);
+    }
+}
+
+.button:hover {
+    animation: pulse 1.5s infinite;
+}
 
     /* Ajustes para pantallas grandes (escritorio) */
     @media (min-width: 1024px) {
@@ -90,7 +115,7 @@
 </head>
 <body>
     <div class="landing">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeiLO9Gbrf1VuJXH6vMixFZHpWkwXotsU143M4EamZAmRNVA/viewform?usp=sharing" class="button">¡Aplica ahora!</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeeiLO9Gbrf1VuJXH6vMixFZHpWkwXotsU143M4EamZAmRNVA/viewform?usp=sharing" class="button">¡Compra tu entrada!</a>
     </div>
 </body>
 </html>
