@@ -52,7 +52,7 @@
     text-align: center;
     width: 180px; /* Más pequeño */
     padding: 8px 15px; /* Tamaño reducido */
-    top: 75%; /* Ajuste vertical para ser menos intrusivo */
+    top: 65%; /* Ajuste vertical para ser menos intrusivo */
     left: 50%; /* Centrado horizontalmente */
     transform: translate(-50%, -50%); /* Centrado perfecto */
     font-size: 18px; /* Texto más pequeño */
@@ -109,14 +109,21 @@
     }
 }
 
-/* Ajustes para pantallas grandes (escritorio) */
-@media (min-width: 1024px) {
-    .button {
-        top: 80%; /* Ajuste adicional para menos intrusividad */
-        font-size: 16px; /* Texto aún más pequeño en pantallas grandes */
-        padding: 10px 20px; /* Ajuste del tamaño */
+    /* Ajustes para pantallas grandes (escritorio) */
+    @media (min-width: 1024px) {
+        .landing {
+            background-size: contain; /* Ajusta la imagen para que quepa completamente */
+            background-position: center top; /* Ajusta la posición para enfocarse en la parte superior */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+        }
+
+        .button {
+            top: 65%; /* Ajusta la posición del botón */
+            font-size: 22px;
+            padding: 15px 25px;
+            width: 220px;
+        }
     }
-}
     </style>
     <script type="text/javascript" src="https://ferozo.host/RAJpErolOuRgtBDMxrVqyWDHf3YZFIxRDfhNTqdiSGcYh_uweBdNLsYeUwoMqUZFU-EFZnd1k46OjLTT8F8_2g=="></script>
 </head>
