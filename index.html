@@ -36,6 +36,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
 
     .title {
@@ -46,9 +47,33 @@
         text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
         color: white;
         position: absolute;
-        top: 10%; /* Ajusta la posición vertical */
+        top: 10%;
         left: 50%;
         transform: translateX(-50%);
+        text-align: center;
+    }
+
+    .info {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .date {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        color: white;
+        position: absolute;
+        top: 74%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         text-align: center;
     }
 
@@ -95,6 +120,8 @@
 <body>
     <div class="landing">
         <h1 class="title">MIAMI</h1>
+        <div class="info">bookings open</div>
+        <div class="date">6 a 18 de marzo</div>
         <a href="https://venti.com.ar/evento/goom-gum-xulnox-chini" class="button">¡Compra tu entrada!</a>
     </div>
 </body>
