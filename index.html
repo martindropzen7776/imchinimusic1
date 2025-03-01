@@ -98,6 +98,7 @@
         cursor: pointer;
         transition: all 0.4s ease-in-out;
         animation: zoomPulse 1.5s infinite;
+        gap: 10px; /* Espacio entre el texto y el icono */
     }
 
     .button:hover {
@@ -116,10 +117,10 @@
         100% { transform: translate(-50%, -50%) scale(1); }
     }
 
-                .whatsapp-icon {
-            width: 40px;
-            height: 40px;
-        }
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+}
     </style>
 </head>
 <body>
@@ -127,8 +128,10 @@
         <h1 class="title">MIAMI</h1>
         <div class="info">bookings open</div>
         <div class="date">6 a 18 de marzo</div>
-        <a href="https://venti.com.ar/evento/goom-gum-xulnox-chini" class="button">BOOK NOW!</a>
-        <img src="whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+<a href="https://venti.com.ar/evento/goom-gum-xulnox-chini" class="button">
+    BOOK NOW!
+    <img src="whatsapp.png" alt="WhatsApp" class="whatsapp-icon">
+</a>
     </div>
 </body>
 </html>
