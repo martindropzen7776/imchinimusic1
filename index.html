@@ -43,19 +43,21 @@ src="https://www.facebook.com/tr?id=3680967698815307&ev=PageView&noscript=1"
         font-style: normal;
     }
 
-    .landing {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        background-image: url('background.jpeg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* sigue ocupando el alto de la pantalla */
+    background-image: url('background.jpeg');
+    background-size: contain; /* muestra toda la imagen sin recortar */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black; /* fondo de seguridad si la imagen no cubre todo */
+}
+
 
     .title {
         font-family: 'MiFuente', sans-serif;
