@@ -139,6 +139,16 @@ src="https://www.facebook.com/tr?id=3680967698815307&ev=PageView&noscript=1"
     width: 20px;
     height: 20px;
 }
+
+        /* --- Versión móvil especial --- */
+@media screen and (max-width: 768px) {
+    .landing {
+        height: 100dvh; /* usa viewport dinámico real en móviles */
+        background-size: contain; /* muestra toda la imagen completa */
+        background-color: black; /* rellena si sobra espacio */
+    }
+}
+        
     </style>
 </head>
 <body>
