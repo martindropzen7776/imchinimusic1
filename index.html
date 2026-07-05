@@ -11,7 +11,7 @@
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)n.push=n;n.loaded=!0;n.version='2.0';
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
@@ -40,23 +40,18 @@
             background: #ffd400;
         }
 
-        @font-face {
-            font-family: 'MiFuente';
-            src: url('mi-fuente.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
         .landing {
             position: relative;
             width: 100%;
             height: 100vh;
             min-height: 100vh;
+
             background-image: url('background1.png');
             background-size: contain;
-            background-position: center center;
+            background-position: center top;
             background-repeat: no-repeat;
             background-color: #ffd400;
+
             display: flex;
             justify-content: center;
             align-items: center;
@@ -73,25 +68,29 @@
         .button {
             position: relative;
             z-index: 2;
-            margin-top: 10px;
+
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+
             min-width: 290px;
             padding: 16px 28px;
             border-radius: 999px;
+
             text-decoration: none;
             font-size: 18px;
             font-weight: 800;
             text-transform: uppercase;
+
             color: #000000;
             background: #ffffff;
             border: 2px solid #ffffff;
+
             box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
-            transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+            transition: box-shadow 0.25s ease, filter 0.25s ease;
+
             animation: zoomPulse 1.8s infinite;
-            transform: translateY(200px);
+            transform: translateY(230px);
         }
 
         .button:hover {
@@ -100,20 +99,28 @@
         }
 
         .button:active {
-            transform: translateY(180px) scale(0.98);
+            transform: translateY(230px) scale(0.98);
         }
 
         @keyframes zoomPulse {
-            0%   { transform: translateY(180px) scale(1); }
-            50%  { transform: translateY(180px) scale(1.04); }
-            100% { transform: translateY(180px) scale(1); }
+            0% {
+                transform: translateY(230px) scale(1);
+            }
+
+            50% {
+                transform: translateY(230px) scale(1.04);
+            }
+
+            100% {
+                transform: translateY(230px) scale(1);
+            }
         }
 
         @media screen and (max-width: 768px) {
             .landing {
                 height: 100dvh;
                 background-size: contain;
-                background-position: center center;
+                background-position: center top;
                 background-repeat: no-repeat;
                 background-color: #ffd400;
             }
@@ -124,17 +131,25 @@
                 max-width: 320px;
                 font-size: 16px;
                 padding: 15px 22px;
-                transform: translateY(200px);
+                transform: translateY(210px);
             }
 
             .button:active {
-                transform: translateY(200px) scale(0.98);
+                transform: translateY(210px) scale(0.98);
             }
 
             @keyframes zoomPulse {
-                0%   { transform: translateY(170px) scale(1); }
-                50%  { transform: translateY(170px) scale(1.04); }
-                100% { transform: translateY(170px) scale(1); }
+                0% {
+                    transform: translateY(210px) scale(1);
+                }
+
+                50% {
+                    transform: translateY(210px) scale(1.04);
+                }
+
+                100% {
+                    transform: translateY(210px) scale(1);
+                }
             }
         }
 
@@ -150,9 +165,17 @@
             }
 
             @keyframes zoomPulse {
-                0%   { transform: translateY(155px) scale(1); }
-                50%  { transform: translateY(155px) scale(1.04); }
-                100% { transform: translateY(155px) scale(1); }
+                0% {
+                    transform: translateY(200px) scale(1);
+                }
+
+                50% {
+                    transform: translateY(200px) scale(1.04);
+                }
+
+                100% {
+                    transform: translateY(200px) scale(1);
+                }
             }
         }
     </style>
