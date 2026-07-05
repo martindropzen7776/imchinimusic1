@@ -11,7 +11,7 @@
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    if(!f._fbq)n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
@@ -37,7 +37,7 @@
         html, body {
             height: 100%;
             font-family: 'Montserrat', sans-serif;
-            background: #000;
+            background: #ffd400;
         }
 
         @font-face {
@@ -47,84 +47,32 @@
             font-style: normal;
         }
 
-.landing {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    min-height: 100vh;
-    background-image: url('background1.png');
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
+        .landing {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 100vh;
+            background-image: url('background1.png');
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-color: #ffd400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
 
         .overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(
-                to bottom,
-                rgba(0,0,0,0.20) 0%,
-                rgba(0,0,0,0.35) 45%,
-                rgba(0,0,0,0.55) 100%
-            );
-        }
-
-        .content {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            max-width: 900px;
-            padding: 24px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .eyebrow {
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #ffffff;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.45);
-        }
-
-        .title {
-            font-family: 'MiFuente', 'Montserrat', sans-serif;
-            font-size: clamp(40px, 9vw, 88px);
-            line-height: 0.95;
-            text-transform: uppercase;
-            color: #ffffff;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.45);
-        }
-
-        .subtitle {
-            max-width: 720px;
-            font-size: clamp(16px, 2.2vw, 24px);
-            font-weight: 700;
-            color: #ffffff;
-            text-transform: uppercase;
-            line-height: 1.4;
-            text-shadow: 0 2px 12px rgba(0,0,0,0.45);
-        }
-
-        .description {
-            max-width: 680px;
-            font-size: clamp(14px, 1.8vw, 18px);
-            font-weight: 400;
-            color: rgba(255,255,255,0.92);
-            line-height: 1.5;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+            background: transparent;
+            pointer-events: none;
         }
 
         .button {
+            position: relative;
+            z-index: 2;
             margin-top: 10px;
             display: inline-flex;
             align-items: center;
@@ -137,42 +85,28 @@
             font-size: 18px;
             font-weight: 800;
             text-transform: uppercase;
-            color: #ffffff;
-            background: linear-gradient(135deg, #1DB954, #169c46);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+            color: #000000;
+            background: #ffffff;
+            border: 2px solid #ffffff;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
             transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
             animation: zoomPulse 1.8s infinite;
+            transform: translateY(180px);
         }
 
         .button:hover {
-            transform: translateY(-2px) scale(1.03);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
-            filter: brightness(1.05);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
+            filter: brightness(0.96);
         }
 
         .button:active {
-            transform: scale(0.98);
-        }
-
-        .spotify-icon {
-            width: 24px;
-            height: 24px;
-            flex-shrink: 0;
-        }
-
-        .small-text {
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1.2px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.88);
-            text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+            transform: translateY(180px) scale(0.98);
         }
 
         @keyframes zoomPulse {
-            0%   { transform: scale(1); }
-            50%  { transform: scale(1.04); }
-            100% { transform: scale(1); }
+            0%   { transform: translateY(180px) scale(1); }
+            50%  { transform: translateY(180px) scale(1.04); }
+            100% { transform: translateY(180px) scale(1); }
         }
 
         @media screen and (max-width: 768px) {
@@ -181,20 +115,7 @@
                 background-size: contain;
                 background-position: center center;
                 background-repeat: no-repeat;
-                background-color: #000;
-            }
-
-            .content {
-                padding: 20px 18px 28px;
-                gap: 14px;
-            }
-
-            .subtitle {
-                font-size: 16px;
-            }
-
-            .description {
-                font-size: 14px;
+                background-color: #ffd400;
             }
 
             .button {
@@ -203,6 +124,35 @@
                 max-width: 320px;
                 font-size: 16px;
                 padding: 15px 22px;
+                transform: translateY(170px);
+            }
+
+            .button:active {
+                transform: translateY(170px) scale(0.98);
+            }
+
+            @keyframes zoomPulse {
+                0%   { transform: translateY(170px) scale(1); }
+                50%  { transform: translateY(170px) scale(1.04); }
+                100% { transform: translateY(170px) scale(1); }
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            .button {
+                max-width: 300px;
+                font-size: 15px;
+                transform: translateY(155px);
+            }
+
+            .button:active {
+                transform: translateY(155px) scale(0.98);
+            }
+
+            @keyframes zoomPulse {
+                0%   { transform: translateY(155px) scale(1); }
+                50%  { transform: translateY(155px) scale(1.04); }
+                100% { transform: translateY(155px) scale(1); }
             }
         }
     </style>
@@ -212,18 +162,16 @@
     <div class="landing">
         <div class="overlay"></div>
 
- 
-
-    <a 
-    href="https://wearebombo.app.link/ffKJwSHqn4b" 
-    class="button" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    onclick="trackPurchase(event, this.href);"
->
-    COMPRA TU TICKET
-</a>
-
+        <a 
+            href="https://wearebombo.app.link/ffKJwSHqn4b" 
+            class="button" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onclick="trackPurchase(event, this.href);"
+        >
+            COMPRA TU TICKET
+        </a>
+    </div>
 
     <script>
     function trackPurchase(event, url) {
